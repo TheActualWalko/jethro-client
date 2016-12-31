@@ -47,8 +47,6 @@ button {
   color: #FFFFFF;
 }
 
-.time {
-  float: left;
-  margin-left: 20px;
-  background-color: #000000;
+.box, .live-feed, .comment, button{
+  border-radius: 3px;
 }
