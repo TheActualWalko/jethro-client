@@ -9,7 +9,6 @@ h1 {
   width: 635px;
   margin: 0 auto;
   background-color: #eaeaea;   
-  border: 1px solid #ddd;
 }
 
 .live-feed {
@@ -33,7 +32,6 @@ h1 {
   float: right;
   background-color: #FFFFFF;
   margin: 20px 20px 0 0;
-  border: 1px solid #ddd;
 }
 
 button {
@@ -50,4 +48,8 @@ button {
 
 .box, .live-feed, .comment, button{
   border-radius: 3px;
+}
+
+.box, .live-feed, .comment{
+  border: 1px solid #ddd;
 }
