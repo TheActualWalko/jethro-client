@@ -5,14 +5,14 @@ h1 {
 }
 
 .box {
-  height: 370px;
+  height: 405px;
   width: 635px;
   margin: 0 auto;
   background-color: #E0E0E0;   
 }
 
 .live-feed {
-  height: 250px;
+  height: 300px;
   width: 400px;
   float: left;
   background-color: #000000; 
@@ -26,7 +26,7 @@ h1 {
   max-height:100%;
 }
 .comment {
-  height: 330px;
+  height: 365px;
   width: 175px;
   float: right;
   background-color: #FFFFFF;
@@ -37,8 +37,8 @@ button {
   height: 45px;
   width: 45px;
   float: right;
-  margin-top: 35px;
   margin-right: 20px;
+  margin-top: 20px;
   background-color: #0074d9;
   border: none;
   font-size: 30px;
