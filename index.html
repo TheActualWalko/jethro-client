@@ -1,34 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <button 
-      class="forward-button" 
-      data-vote="FORWARD"
-    >
-      forward
-    </button>
-    <button 
-      class="backward-button" 
-      data-vote="BACKWARD"
-    >
-      backward
-    </button>
-    <button 
-      class="left-button" 
-      data-vote="LEFT"
-    >
-      left
-    </button>
-    <button 
-      class="right-button" 
-      data-vote="RIGHT"
-    >
-      right
-    </button>
-    <img id="img" />
-    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
-    <script src="index.js"></script>
-  </body>
+<html>  
+<head>
+  <meta charset='UTF-8'>  
+  <title>@TweetPlaysRC</title>
+</head>
+  
+<body>
+  <h1>@TweetPlaysRC</h1>
+  <div class="box">
+    <div class="live-feed"></div>
+    <div class="comment"></div>
+    
+    <button class="time"></button>
+    <button class="right"></button>
+    <button class="left"></button>
+    <button class="backward"></button>
+    <button class="forward"></button>
+    
+  </div>
+
+</body>
 </html>
