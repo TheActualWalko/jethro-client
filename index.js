@@ -15,6 +15,16 @@ const vote = (dir)=>{
   });
 };
 
+const liveChatElement = document.getElementById("live-chat");
+
+const addMessage = ( message, sender )=>{
+  $(liveChatElement).prepend(`
+    <div class="message">
+      <strong>${sender}:</strong><br />${message}
+    </div>
+  `);
+};
+
 socket.on("connect", ()=>{
   console.log("connected");
 });
@@ -34,6 +44,10 @@ socket.on("frame", frame=>{
   }
   lastURL = blobURL;
   console.log("got frame");
+});
+
+socket.on("message", ( message, sender )=>{
+  addMessage( message, sender );
 });
 
 const buttons = document.querySelectorAll("button");
