@@ -8,7 +8,8 @@ h1 {
   height: 405px;
   width: 635px;
   margin: 0 auto;
-  background-color: #E0E0E0;   
+  background-color: #eaeaea;   
+  border: 1px solid #ddd;
 }
 
 .live-feed {
@@ -31,17 +32,18 @@ h1 {
   float: right;
   background-color: #FFFFFF;
   margin: 20px 20px 0 0;
+  border: 1px solid #ddd;
 }
 
 button {
   height: 45px;
   width: 45px;
-  float: right;
-  margin-right: 20px;
+  float: left;
   margin-top: 20px;
+  margin-left: 20px;
   background-color: #0074d9;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   color: #FFFFFF;
 }
 
