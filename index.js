@@ -4,7 +4,7 @@ const imgElement = document.getElementById("img");
 
 const URL = window.URL || window.webkitURL;
 
-const vote = (dir)=>{
+const vote = ( dir )=>{
   console.log("voting " + dir);
   socket.emit("vote", dir, result=>{
     if( result === "voted" ){
@@ -13,6 +13,16 @@ const vote = (dir)=>{
       console.log("vote failed: " + result);
     }
   });
+};
+
+const liveChatElement = document.getElementById("live-chat");
+
+const addMessage = ( message, sender )=>{
+  $(liveChatElement).prepend(`
+    <div class="message">
+      <strong>${sender}:</strong><br />${message}
+    </div>
+  `);
 };
 
 socket.on("connect", ()=>{
@@ -36,10 +46,14 @@ socket.on("frame", frame=>{
   console.log("got frame");
 });
 
+socket.on("message", ( message, sender )=>{
+  addMessage( message, sender );
+});
+
 const buttons = document.querySelectorAll("button");
 
-buttons.forEach(b=>{
+buttons.forEach( b=>{
   b.addEventListener("click", ()=>{
-    vote(b.attributes["data-vote"].value);
+    vote( b.attributes["data-vote"].value );
   });
 });
