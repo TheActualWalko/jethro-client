@@ -53,3 +53,20 @@ button {
 .box, .live-feed, .comment{
   border: 1px solid #ddd;
 }
+
+.comment {
+  position: relative;
+}
+
+.comment .coming-soon {
+  text-align:center;
+  display:block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #595959;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:14px;
+  transform:rotate(10deg);
+}
