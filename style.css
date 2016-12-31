@@ -1,3 +1,7 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 h1 {
   text-align: center;
   font: 30px Georgia, serif; 
@@ -34,6 +38,17 @@ h1 {
   margin: 20px 20px 0 0;
 }
 
+.comment .message {
+  margin: 10px 10px 0 10px;
+  padding: 10px 10px;
+  font-size: 16px;
+  background-color: #eee;
+}
+
+.comment .message strong {
+  font-size:12px;
+}
+
 button {
   height: 45px;
   width: 45px;
@@ -66,7 +81,6 @@ button {
   left: 0;
   right: 0;
   color: #595959;
-  font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   transform: rotate(10deg);
 }
