@@ -12,8 +12,12 @@
       <div class="live-feed">
         <img id="img" />
       </div>
-      <div class="comment" id="live-chat">
-        
+      <div class="comment">
+        <div class="messages" id="live-chat">
+        </div>        
+        <form class="write-message">
+          <textarea class="message-input" id="message-input"></textarea>
+        </form>
       </div>      
       <button data-vote="FORWARD" class="forward">&uarr;</button>
       <button data-vote="BACKWARD" class="backward">&darr;</button>
@@ -23,5 +27,6 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
     <script src="index.js"></script>
+    <script src="messages.js"></script>
   </body>
 </html>

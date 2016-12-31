@@ -36,7 +36,33 @@ h1 {
   float: right;
   background-color: #FFFFFF;
   margin: 20px 20px 0 0;
-  overflow-y:scroll;
+  overflow:hidden;
+}
+
+.comment .messages {
+  height: 600px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.comment .write-message {
+  height: 65px;
+  width: 100%;
+}
+
+.comment .write-message textarea {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 5px;
+  resize: none;
+}
+
+.comment .write-message textarea:focus {
+  outline: none;
+  border: 1px solid #0074d9;
 }
 
 .comment .message {
