@@ -1,6 +1,8 @@
 const socket = io.connect("http://sam-watkinson.com:3000");
 
-const img = document.getElementById("img");
+const imgElement = document.getElementById("img");
+
+const URL = window.URL || window.webkitURL;
 
 const vote = (dir)=>{
   console.log("voting " + dir);
@@ -26,7 +28,7 @@ let lastURL;
 socket.on("frame", frame=>{
   const blob = new Blob([frame], { type : "image/jpg" });
   const blobURL = URL.createObjectURL(blob);
-  img.setAttribute("src", blobURL);
+  imgElement.setAttribute("src", blobURL);
   if( lastURL ){
     URL.revokeObjectURL( lastURL );
   }
