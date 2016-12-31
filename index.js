@@ -21,10 +21,16 @@ socket.on("results", results=>{
   console.log(results);
 });
 
+let lastURL;
+
 socket.on("frame", frame=>{
   const blob = new Blob([frame], { type : "image/jpg" });
   const blobURL = URL.createObjectURL(blob);
   img.setAttribute("src", blobURL);
+  if( lastURL ){
+    URL.revokeObjectURL( lastURL );
+  }
+  lastURL = blobURL;
   console.log("got frame");
 });
 
