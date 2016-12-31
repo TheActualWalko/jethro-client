@@ -4,7 +4,7 @@ const imgElement = document.getElementById("img");
 
 const URL = window.URL || window.webkitURL;
 
-const vote = (dir)=>{
+const vote = ( dir )=>{
   console.log("voting " + dir);
   socket.emit("vote", dir, result=>{
     if( result === "voted" ){
@@ -52,8 +52,8 @@ socket.on("message", ( message, sender )=>{
 
 const buttons = document.querySelectorAll("button");
 
-buttons.forEach(b=>{
+buttons.forEach( b=>{
   b.addEventListener("click", ()=>{
-    vote(b.attributes["data-vote"].value);
+    vote( b.attributes["data-vote"].value );
   });
 });
