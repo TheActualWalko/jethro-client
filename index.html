@@ -9,13 +9,17 @@
   <body>
     <h1>@TweetPlaysRC</h1>
     <div class="box">
-      <div class="live-feed"></div>
+      <div class="live-feed">
+        <img id="img" />
+      </div>
       <div class="comment"></div>      
       <button class="time"></button>
-      <button class="right"></button>
-      <button class="left"></button>
-      <button class="backward"></button>
-      <button class="forward"></button>
+      <button data-vote="RIGHT" class="right"></button>
+      <button data-vote="LEFT" class="left"></button>
+      <button data-vote="BACKWARD" class="backward"></button>
+      <button data-vote="FORWARD" class="forward"></button>
     </div>
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
