@@ -17,10 +17,26 @@ const vote = ( dir )=>{
 
 const liveChatElement = document.getElementById("live-chat");
 
+const entityMap = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': '&quot;',
+  "'": '&#39;',
+  "/": '&#x2F;'
+};
+
+const escapeHtml = (string)=>{
+  return String(string).replace(/[&<>"'\/]/g, function (s) {
+    return entityMap[s];
+  });
+}
+
 const addMessage = ( message, sender )=>{
+
   $(liveChatElement).prepend(`
     <div class="message">
-      <strong>${sender}:</strong><br />${message}
+      <strong>${escapeHtml(sender)}:</strong><br />${escapeHtml(message)}
     </div>
   `);
 };
